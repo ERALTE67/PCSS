@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCSS 2026</title>
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:#0f2a5c;
+  color:white;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+}
+
+.screen{
+  display:none;
+  min-height:100vh;
+  padding:16px;
+}
+
+.active{display:block}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#1e4fa3,#4ba3ff);
+  color:white;
+  font-size:16px;
+}
+
+img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+}
+
+/* TABLAS */
+.card{
+  background:white;
+  color:#111;
+  border-radius:16px;
+  padding:10px;
+  margin-top:10px;
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+th{
+  background:#1e4fa3;
+  color:white;
+  padding:8px;
+}
+
+td{
+  padding:8px;
+  border-bottom:1px solid #ddd;
+}
+
+tr:nth-child(even){
+  background:#f5f5f5;
+}
+
+.title{
+  text-align:center;
+  margin:10px 0;
+  font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PORTADA -->
+<section id="home" class="screen active">
+  <img src="pag. principal.png" alt="Portada PCSS 2026">
+  <button onclick="go('menu')">Ingresar a resultados</button>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="screen">
+  <div class="title">Selecciona una vista</div>
+  <button onclick="go('podio')">PODIO</button>
+  <button onclick="go('top5')">TOP 5</button>
+  <button onclick="go('top10')">TOP 10</button>
+  <button onclick="go('general')">GENERAL</button>
+  <button onclick="go('home')">Volver a portada</button>
+</section>
+
+<!-- PODIO -->
+<section id="podio" class="screen">
+  <img src="pag.podio.png" alt="Podio">
+  <button onclick="go('menu')">Volver</button>
+</section>
+
+<!-- TOP 5 -->
+<section id="top5" class="screen">
+  <img src="pag.top5.png" alt="Top 5">
+  <button onclick="go('menu')">Volver</button>
+</section>
+
+<!-- TOP 10 -->
+<section id="top10" class="screen">
+  <div class="title">TOP 10</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Chofer</th>
+          <th>Total</th>
+          <th>DIF. 1RO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>BENCHETRIT JUAN</td><td>419</td><td>0</td></tr>
+        <tr><td>2</td><td>CARABAJAL JUAN</td><td>404</td><td>15</td></tr>
+        <tr><td>3</td><td>GALESIO GONZALO</td><td>397</td><td>22</td></tr>
+        <tr><td>4</td><td>MONTIEL JAVIER</td><td>391</td><td>28</td></tr>
+        <tr><td>5</td><td>CARTERY ALEJANDRO</td><td>385</td><td>34</td></tr>
+        <tr><td>6</td><td>SAMPALLO LUIS</td><td>371</td><td>48</td></tr>
+        <tr><td>7</td><td>BENÍTEZ CLAUDIO</td><td>359</td><td>60</td></tr>
+        <tr><td>8</td><td>MENTA ARIEL</td><td>359</td><td>60</td></tr>
+        <tr><td>9</td><td>GÓMEZ PEDRO</td><td>348</td><td>71</td></tr>
+        <tr><td>10</td><td>PASSALACQUA RAMIRO</td><td>338</td><td>81</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <button onclick="go('menu')">Volver</button>
+</section>
+
+<!-- GENERAL -->
+<section id="general" class="screen">
+  <div class="title">Ranking General</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Chofer</th>
+          <th>Total</th>
+          <th>DIF. 1RO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>BENCHETRIT JUAN</td><td>419</td><td>0</td></tr>
+        <tr><td>2</td><td>CARABAJAL JUAN</td><td>404</td><td>15</td></tr>
+        <tr><td>3</td><td>GALESIO GONZALO</td><td>397</td><td>22</td></tr>
+        <tr><td>4</td><td>MONTIEL JAVIER</td><td>391</td><td>28</td></tr>
+        <tr><td>5</td><td>CARTERY ALEJANDRO</td><td>385</td><td>34</td></tr>
+        <tr><td>6</td><td>SAMPALLO LUIS</td><td>371</td><td>48</td></tr>
+        <tr><td>7</td><td>BENÍTEZ CLAUDIO</td><td>359</td><td>60</td></tr>
+        <tr><td>8</td><td>MENTA ARIEL</td><td>359</td><td>60</td></tr>
+        <tr><td>9</td><td>GÓMEZ PEDRO</td><td>348</td><td>71</td></tr>
+        <tr><td>10</td><td>PASSALACQUA RAMIRO</td><td>338</td><td>81</td></tr>
+        <tr><td>11</td><td>LEIVA MAURO</td><td>336</td><td>83</td></tr>
+        <tr><td>12</td><td>FERNÁNDEZ JOSÉ LUIS</td><td>335</td><td>84</td></tr>
+        <tr><td>13</td><td>MONZÓN ÁNGEL</td><td>334</td><td>85</td></tr>
+        <tr><td>14</td><td>CREMASCHI PEDRO</td><td>333</td><td>86</td></tr>
+        <tr><td>15</td><td>GÓMEZ JULIÁN</td><td>323</td><td>96</td></tr>
+        <tr><td>16</td><td>TROPINI SEBASTIÁN</td><td>318</td><td>101</td></tr>
+        <tr><td>17</td><td>OLIVERA GUILLERMO</td><td>306</td><td>113</td></tr>
+        <tr><td>18</td><td>MENDIETA JUAN</td><td>301</td><td>118</td></tr>
+        <tr><td>19</td><td>ACEVEDO MIGUEL</td><td>293</td><td>126</td></tr>
+        <tr><td>20</td><td>RAMÍREZ ARIEL</td><td>286</td><td>133</td></tr>
+        <tr><td>21</td><td>LEIVA NICOLÁS</td><td>268</td><td>151</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <button onclick="go('menu')">Volver</button>
+</section>
+
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
